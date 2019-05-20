@@ -19,8 +19,7 @@
 
 {#each services as service}
 <Service
-  title={service.title}
-  price={service.price}
+    {...service}
   on:add-to-cart={addToCart}
   on:delete={deleteService} />
 {/each}
