@@ -28,4 +28,5 @@
 <Modal>
     <h1 slot="header">Servus World!</h1>
     <p>innovate as fast as possible!</p>
+    <button slot="footer">Confirm</button>
 </Modal>
