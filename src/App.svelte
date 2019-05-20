@@ -1,5 +1,6 @@
 <script>
   import Service from "./Service.svelte";
+  import Modal from './Modal.svelte';
 
   let services = [
     {
@@ -23,3 +24,5 @@
   on:add-to-cart={addToCart}
   on:delete={deleteService} />
 {/each}
+
+<Modal content="Servus!" />
