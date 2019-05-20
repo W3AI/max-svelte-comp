@@ -26,10 +26,18 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     overflow: scroll;
   }
+
+  header {
+      border-bottom: 1px solid #ccc;
+  }
 </style>
 
 <div class="backdrop" />
-
 <div class="modal">
-  <slot />
+  <header>
+    <slot name="header" />
+  </header>
+  <div class="content">
+    <slot />
+  </div>
 </div>

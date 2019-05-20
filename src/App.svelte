@@ -26,6 +26,6 @@
 {/each}
 
 <Modal>
-    <h1>Servus World!</h1>
+    <h1 slot="header">Servus World!</h1>
     <p>innovate as fast as possible!</p>
 </Modal>
