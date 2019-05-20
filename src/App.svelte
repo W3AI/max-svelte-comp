@@ -26,5 +26,11 @@
 {/each}
 
 <Modal>
-    <h1>Servus!</h1>
+    <h1>Servus Canada!</h1>
+    <p>innovate as fast as possible!</p>
+</Modal>
+
+<Modal>
+    <h1>Servus World!</h1>
+    <p>innovate as fast as possible!</p>
 </Modal>
