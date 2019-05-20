@@ -1,11 +1,5 @@
 <script>
-	export let name;
+    import Service from './Service.svelte';
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
-
-<h1>Hello {name}!</h1>
+<Service serviceTitle="A Booking" />
