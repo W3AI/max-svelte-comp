@@ -2,10 +2,10 @@
   import Service from "./Service.svelte";
 
   function addToCart(event) {
-      console.log(event);
+      console.log(event.detail);
   }
     function deleteService(event) {
-      console.log(event);
+      console.log(event.detail);
   }
 </script>
 
