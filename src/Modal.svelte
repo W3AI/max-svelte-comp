@@ -4,6 +4,8 @@
     const dispatch = createEventDispatcher();
 
     let agreed = false;
+
+    console.log('Modal Script executed!');
 </script>
 
 <style>
