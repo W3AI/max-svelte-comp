@@ -30,4 +30,4 @@
 
 <div class="backdrop" />
 
-<div class="modal">{content}</div>
+<div class="modal">{@html content}</div>

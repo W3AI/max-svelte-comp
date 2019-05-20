@@ -25,4 +25,4 @@
   on:delete={deleteService} />
 {/each}
 
-<Modal content="Servus!" />
+<Modal content="<h1>Servus!</h1>" />
