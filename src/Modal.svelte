@@ -1,5 +1,5 @@
 <script>
-    export let content;
+
 </script>
 
 <style>
@@ -30,4 +30,6 @@
 
 <div class="backdrop" />
 
-<div class="modal">{@html content}</div>
+<div class="modal">
+  <slot />
+</div>
