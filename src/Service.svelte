@@ -1,7 +1,8 @@
 <script>
     import { createEventDispatcher } from 'svelte';
 
-    export let serviceTitle;
+    export let title;
+    export let price;
 
     const dispatch = createEventDispatcher();
 
@@ -11,7 +12,8 @@
 </script>
 
 <article>
-    <h1>{serviceTitle}</h1>
+    <h1>{title}</h1>
+    <h2>${price}</h2>
     <button on:click="{addToCart}">Add to Cart</button>
     <button on:click="{() => {dispatch('delete', 's1')}}">Delete</button>
 </article>
