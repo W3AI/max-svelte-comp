@@ -1,20 +1,30 @@
 <script>
-    import { createEventDispatcher, onMount, onDestroy } from 'svelte';
+  import {
+    createEventDispatcher,
+    onMount,
+    onDestroy,
+    beforeUpdate,
+    afterUpdate
+  } from "svelte";
 
-    const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher();
 
-    let agreed = false;
+  let agreed = false;
 
-    // function to be executed onMount by svelte
-    onMount(() => {
-        console.log('onMount -> fetch Projects & Services data/snapshots from realtime market db');
-    });
+  // function to be executed onMount by svelte
+  onMount(() => {
+    console.log(
+      "onMount -> fetch Projects & Services data/snapshots from realtime market db"
+    );
+  });
 
-    onDestroy(() => {
-        console.log('onMount -> update Projects & Services data in the realtime market db');
-    });
+  onDestroy(() => {
+    console.log(
+      "onMount -> update Projects & Services data in the realtime market db"
+    );
+  });
 
-    console.log('Modal Script executed!');
+  console.log("Modal Script executed!");
 </script>
 
 <style>
@@ -43,11 +53,11 @@
   }
 
   header {
-      border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 </style>
 
-<div class="backdrop" on:click="{() => dispatch('cancel')}" />
+<div class="backdrop" on:click={() => dispatch('cancel')} />
 <div class="modal">
   <header>
     <slot name="header" />
@@ -57,13 +67,13 @@
   </div>
   <div class="disclaimer">
     <p>Before you close, you need to agree to our terms!</p>
-    <button on:click="{() => agreed = true}">Agree</button>
+    <button on:click={() => (agreed = true)}>Agree</button>
   </div>
   <footer>
-  <slot name="footer" didAgree={agreed}>
-    <button 
-        on:click="{() => dispatch('close')}" 
-        disabled={!agreed}>Close</button>
-  </slot>
+    <slot name="footer" didAgree={agreed}>
+      <button on:click={() => dispatch('close')} disabled={!agreed}>
+        Close
+      </button>
+    </slot>
   </footer>
 </div>
