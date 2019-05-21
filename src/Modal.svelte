@@ -5,6 +5,15 @@
 
     let agreed = false;
 
+    // function to be executed onMount by svelte
+    onMount(() => {
+        console.log('onMount -> fetch Projects & Services data/snapshots from realtime market db');
+    });
+
+    onDestroy(() => {
+        console.log('onMount -> update Projects & Services data in the realtime market db');
+    });
+
     console.log('Modal Script executed!');
 </script>
 
